@@ -1,5 +1,7 @@
 .idea
 .env
 input_files
-grpc_api/document_searvice_pb*
+grpc_api/mychromadb_data
+grpc_api/document_service_pb2.py
+grpc_api/document_service_pb2_grpc.py
 __pycache__/
