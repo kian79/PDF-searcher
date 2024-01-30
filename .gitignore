@@ -1,0 +1,5 @@
+.idea
+.env
+input_files
+grpc_api/document_searvice_pb*
+__pycache__/
