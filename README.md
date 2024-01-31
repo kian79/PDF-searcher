@@ -4,7 +4,9 @@
 
 ## Overview
 
-The Document Service is a Python project that provides a gRPC API for uploading, searching, and summarizing documents. It includes a gRPC server for handling document-related operations and can be easily deployed using Docker.
+The PDF Searcher is a Python project that provides a gRPC API for uploading, searching, and summarizing documents. It includes a gRPC server for handling document-related operations and can be easily deployed using Docker. It also uses [chromadb](https://docs.trychroma.com/) which is a vector database to store the data. After uploading the documents through the gRPC API the project converts the pdf file to text and embeds the text using [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) which is a sentence-transformers model.
+
+In addition to uploading documents and adding them to the database, you can call the APIs to search for a query in the database and summarizing your texts.
 
 ## Prerequisites
 
