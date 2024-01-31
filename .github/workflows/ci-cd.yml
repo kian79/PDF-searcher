@@ -50,5 +50,5 @@ jobs:
     - name: Deploy to Docker Hub
       run: |
         echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
-        docker tag your-docker-image-name ${{ secrets.DOCKERHUB_USERNAME }}/your-docker-image-name:latest
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/your-docker-image-name:latest
+        docker tag kian79/pdf_searcher:latest ${{ secrets.DOCKERHUB_USERNAME }}/pdf_searcher:latest
+        docker push ${{ secrets.DOCKERHUB_USERNAME }}/pdf_searcher:latest
