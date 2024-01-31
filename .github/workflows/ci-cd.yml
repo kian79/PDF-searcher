@@ -44,7 +44,7 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run tests
-      run: pytest tests/
+      run: PYTHONPATH=.:.. pytest tests/
 
   deploy:
     runs-on: ubuntu-latest
