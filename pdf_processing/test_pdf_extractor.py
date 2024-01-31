@@ -1,4 +1,4 @@
-from  preprocessing import convert_pdf_to_text
+from preprocessing import convert_pdf_to_text
 
 input_pdf_path = 'tests/sample_pdf.pdf'
 result_text = convert_pdf_to_text(input_pdf_path)
