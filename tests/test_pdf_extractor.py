@@ -1,6 +1,8 @@
 import sys
 print(sys.path)
-sys.path.append('pdf_searcher_project/')
+sys.path.append('../')
+print(sys.path)
+
 
 from  pdf_processing.preprocessing import convert_pdf_to_text
 
