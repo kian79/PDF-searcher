@@ -38,5 +38,3 @@ def search_documents(collection, query:str):
         n_results = 2
     )
     return query_results
-
-
