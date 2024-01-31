@@ -1,4 +1,4 @@
-# Document Service
+# PDF Searcher
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
@@ -36,8 +36,11 @@ Make sure you have the following prerequisites installed:
    PYTHONPATH=.:.. python grpc_api/server.py
   The server should be running on localhost:50051.
 
-
-
-
-
-
+### Docker Setup
+1. Build the Docker image:
+   ```bash
+   docker build -t pdf_searcher .
+2. Run the Docker container:
+   ```bash
+   docker run -p 50051:50051 pdf_searcher
+  The gRPC server should be accessible on localhost:50051.
