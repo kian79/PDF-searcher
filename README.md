@@ -32,9 +32,6 @@ Make sure you have the following prerequisites installed:
    pip install -r requirements.txt
 4. Run the gRPC server:
    ```bash
-   pip install -r requirements.txt
-5. Install dependencies:
-   ```bash
    PYTHONPATH=.:.. python grpc_api/server.py
   The server should be running on localhost:50051.
 
