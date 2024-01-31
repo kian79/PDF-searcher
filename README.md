@@ -44,3 +44,30 @@ Make sure you have the following prerequisites installed:
    ```bash
    docker run -p 50051:50051 pdf_searcher
   The gRPC server should be accessible on localhost:50051.
+
+## Usage
+To interact with the Document Service, you can use the provided gRPC client script or integrate the service into your own Python applications.
+
+Example usage in Python client:
+
+   ```bash
+import grpc
+import document_service_pb2 as pb2
+import document_service_pb2_grpc as pb2_grpc
+
+def upload_document(file_content, document_name):
+    with grpc.insecure_channel("localhost:50051") as channel:
+        stub = pb2_grpc.DocumentServiceStub(channel)
+        request = pb2.UploadRequest(file_content=file_content, document_name=document_name)
+        response = stub.UploadDocument(request)
+        return response.document_id
+
+# Other client functions...
+
+# Example usage:
+with open("path/to/your/document.pdf", "rb") as file:
+    pdf_content = file.read()
+
+document_id = upload_document(pdf_content)
+print(f"Uploaded document with ID: {document_id}")
+
