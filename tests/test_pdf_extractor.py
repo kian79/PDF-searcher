@@ -1,4 +1,8 @@
-from pdf_processing.preprocessing import convert_pdf_to_text
+import sys
+print(sys.path)
+sys.path.append('pdf_searcher_project/')
+
+from  pdf_processing.preprocessing import convert_pdf_to_text
 
 input_pdf_path = 'tests/sample_pdf.pdf'
 result_text = convert_pdf_to_text(input_pdf_path)
