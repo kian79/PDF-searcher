@@ -1,6 +1,6 @@
 from pdf_processing.preprocessing import convert_pdf_to_text
 
-input_pdf_path = 'sample_pdf.pdf'
+input_pdf_path = 'tests/sample_pdf.pdf'
 result_text = convert_pdf_to_text(input_pdf_path)
 expected_text = """Love encompasses a range of strong and positive emotional and mental
  states, from the most sublime virtue or good habit, the deepest interpersonal affection,
